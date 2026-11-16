@@ -1,157 +1,487 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Islamic Institutes</title>
+<title>NOORUL ILM | Islamic Institute</title>
 
-    <style>
-        body {
-            background-color:Golden;
-            margin: 20px;
-            font-family: Arial, sans-serif;
-        }
+<style>
 
-        img {
-            width: 100%;
-            max-height: 350px;
-            object-fit: cover;
-        }
+/* GENERAL DESIGN */
 
-        h1 {
-            color: #064E3B;
-            text-align: center;
-            word-spacing: 10px;
-        }
-       
-         h2 {
-            color: #0000FF;
-            text-align: center;
-            word-spacing: 10px;}
-        h3 {
-            color: #4e0606;
-            text-align: center;
-            word-spacing: 10px;
-        }
-        p {
-            color: #444444;
-            line-height: 1.7;
-            font-size: 17px;
-        }
-    </style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5ef;
+    color: #333;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    background: #064E3B;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #E9C875;
+}
+
+/* HERO SECTION */
+
+.hero {
+    background: #064E3B;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 5px solid #D6B45A;
+}
+
+.hero img {
+    width: 90%;
+    max-width: 1000px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.hero h1 {
+    color: #E9C875;
+    margin: 25px 0;
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* COMMON SECTION */
+
+.section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #ddd;
+}
+
+.section h1 {
+    color: #064E3B;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    color: #064E3B;
+    margin: 20px 0;
+}
+
+.section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+/* COURSES */
+
+.courses-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.courses-section h1 {
+    color: #064E3B;
+    font-size: 35px;
+}
+
+.courses-section h3 {
+    color: #9A7A32;
+    margin: 15px;
+}
+
+.course-container {
+    max-width: 1100px;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    border-top: 5px solid #D6B45A;
+    box-shadow: 0 5px 15px #ddd;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-7px);
+}
+
+.course-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.course-card h2 {
+    color: #064E3B;
+    margin: 18px 0;
+    font-size: 22px;
+}
+
+.course-card p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* SERVICES */
+
+.services {
+    background: #064E3B;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services h1 {
+    color: #E9C875;
+    margin-bottom: 25px;
+}
+
+.services ul {
+    list-style: none;
+    line-height: 2.3;
+    font-size: 18px;
+}
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    background: #064E3B;
+    color: white;
+    padding: 13px 28px;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #B99A50;
+}
+
+/* FAQ */
+
+.faq h3 {
+    color: #8B702D;
+    margin-top: 22px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #064E3B;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    border-top: 5px solid #D6B45A;
+}
+
+footer h2 {
+    color: #E9C875;
+    margin-bottom: 15px;
+}
+
+footer p {
+    line-height: 2;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 600px) {
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero img {
+        height: 220px;
+    }
+
+    .section {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <img src="islamic institute.jpg" alt="Islamic Institute">
+<!-- NAVIGATION -->
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<!-- HOME -->
+
+<div class="hero">
+
+    <img src="islamic institute.jpg" alt="NOORUL ILM Institute">
 
     <h1>Welcome to Islamic Institute of NOORUL ILM</h1>
 
-    <h3> The Role of Islamic Education in Promoting Peace and Tolerance</h3>
+    <p>Knowledge • Faith • Action • Character</p>
 
-    <h3> What Are Islamic Institutes?</h3>
+    <p>The Role of Islamic Education in Promoting Peace and Tolerance</p>
+
+</div>
+
+<!-- INTRODUCTION -->
+
+<div class="section">
+
+    <h1>INTRODUCTION</h1>
 
     <p>
-        Islamic institutes are educational institutions that provide
-        knowledge about Islam, the Holy Quran, Hadith, Islamic history,
-        and Islamic values. Their main purpose is to educate students
-        about the teachings of Islam and help them develop good character,
-        honesty, kindness, peace, and respect for others.
+    Islamic education plays an important role in building
+    a peaceful, moral, and educated society. Islamic
+    institutes are places where students learn about
+    the Holy Quran, Hadith, Islamic history and teachings.
     </p>
 
     <p>
-        Islamic institutes also promote unity, brotherhood, tolerance,
-        and harmony in society. They encourage people to follow the
-        teachings of Islam and contribute positively to the community.
+    The main aim of Islamic education is to develop
+    good character, honesty, kindness, discipline and
+    respect for all people.
     </p>
 
-    <h3>INTRODUCTION</h3>
-<p>
-Islamic education plays an important role in building a peaceful, moral, and educated society. Islamic institutes are places where students learn about the Holy Quran, Hadith, Islamic history, and the teachings of Islam.
+    <p>
+    Islamic institutes promote peace, unity, brotherhood
+    and tolerance in society.
+    </p>
 
-The main aim of Islamic education is to develop good character, honesty, kindness, discipline, and respect for all people. It teaches us the importance of peace, unity, brotherhood, and tolerance.
+</div>
 
-Islamic institutes help students understand the true values of Islam and encourage them to become responsible members of society. They also promote harmony and mutual understanding among people of different communities.
+<!-- ABOUT -->
 
-Through Islamic education, we can build a society based on knowledge, peace, respect, and humanity. 
-</p>
-<img src="islamic.png">
-<h1>ABOUT OUR INSTITUTE</h1>
+<div class="section">
 
-<h3>Knowledge.Faith.Action.Character</h3>
-<p>Our Islamic Institute is dedicated to providing quality Islamic education and helping students learn about the Quran, Islamic values, and teachings of Islam.</p>
+    <h1>ABOUT OUR INSTITUTE</h1>
 
-<h4>Our Mission</h4>
+    <p>
+    NOORUL ILM is an Islamic educational institute
+    dedicated to providing quality Islamic education
+    and helping students learn about the Quran and
+    Islamic values.
+    </p>
 
-<p>To spread authentic Islamic knowledge and encourage students to develop good character, discipline, and strong moral values.</p>
+    <h2>Our Mission</h2>
 
-<h4>Our Vision</h4>
+    <p>
+    To spread authentic Islamic knowledge and encourage
+    students to develop good character, discipline
+    and strong moral values.
+    </p>
 
-<p>To build a knowledgeable and responsible generation guided by Islamic teachings.</p>
+    <h2>Our Vision</h2>
 
-<h4>What We Offer</h4>
-<ul>
-    <li>Quran Education</li>
-    <li>Islamic Studies</li>
-    <li>Hadith Studies</li>
-    <li>Arabic Language</li>
-    <li>Islamic History</li>
-</ul>
- <h1>Our Services–NOORUL ILM</h1>
- <img src="islam.png">
- <h1>Our Services</h1>
- <h3>Learn Islam.Build Your Future</h3>
- <img  src="1.png">
- <p>"Learn Islam, Build Your Future" represents the importance of gaining Islamic knowledge and applying its teachings in everyday life.</p>
-<h1>Our Projects</h1>
-<h3>Inspiring Knowledge, Building Futures</h3>
-<p>At NOORUL ILM, we aim to promote Islamic knowledge, education, and positive values through meaningful educational projects and community activities.</p>
-<h1>Future Goals</h1>
-Online Islamic Learning Platform
+    <p>
+    To build a knowledgeable and responsible generation
+    guided by Islamic teachings.
+    </p>
 
+    <a href="about.html" class="button">Read More</a>
 
-<p>
-<ul>
-    <li>Digital Quran Education</li>
-    <li>Online Arabic Classes</li>
-    <li>Islamic E-Library</li>
-    <li>Educational Resources for Students</li>
-</ul>
-</p>
-<h1>Frequently Asked Questions (FAQs)</h1>
+</div>
 
-<p>Q1. What is NOORUL ILM?</p>
+<!-- COURSES -->
 
-<p>Ans. NOORUL ILM is an Islamic educational institute dedicated to spreading Islamic knowledge.</p>
+<section class="courses-section">
 
-<p>Q2. What courses do you offer?</p>
+    <h1>OUR COURSES</h1>
 
-<p>Ans. We offer Quran, Tajweed, Hifz, Hadith, Tafseer, Arabic and Islamic Studies.</p>
+    <h3>Learn Islam. Build Your Future.</h3>
 
-<p>Q3. Who can join the institute?</p>
+    <div class="course-container">
 
-<p>Ans. Anyone interested in learning Islamic education can enquire about admission.</p>
+        <div class="course-card">
+            <img src="1.png" alt="Quran Education">
+            <h2>Quran Education</h2>
+            <p>Learn to read the Holy Quran with proper pronunciation and understanding.</p>
+        </div>
 
-<p>Q4. Do you teach the Holy Quran?</p>
+        <div class="course-card">
+            <img src="6.png" alt="Tajweed">
+            <h2>Tajweed</h2>
+            <p>Learn the rules of Quranic recitation and correct pronunciation.</p>
+        </div>
 
-<p>Ans. Yes, Quran reading and Tajweed are among our educational programs.</p>
+        <div class="course-card">
+            <img src="3.png" alt="Hifz-ul-Quran">
+            <h2>Hifz-ul-Quran</h2>
+            <p>Learn and memorize the Holy Quran with regular revision.</p>
+        </div>
 
-<p>Q5. Do you teach Arabic?</p>
+        <div class="course-card">
+            <img src="4.png" alt="Hadith Studies">
+            <h2>Hadith Studies</h2>
+            <p>Study the teachings and traditions of Prophet Muhammad (PBUH).</p>
+        </div>
 
-<p>Ans. Yes, we include Arabic language education.</p>
+        <div class="course-card">
+            <img src="5.png" alt="Arabic Language">
+            <h2>Arabic Language</h2>
+            <p>Learn Arabic reading, writing and basic language skills.</p>
+        </div>
 
-<p>Q6. How can I get admission?</p>
+        <div class="course-card">
+            <img src="is.png" alt="Islamic History">
+            <h2>Islamic History</h2>
+            <p>Learn about Islamic history and important historical events.</p>
+        </div>
 
-<p>Ans. You can contact our institute for admission information.</p>
+        <div class="course-card">
+            <img src="is2.png" alt="Tafseer">
+            <h2>Tafseer</h2>
+            <p>Learn the meanings and explanations of the Holy Quran.</p>
+        </div>
 
-<p>Q7. What is the main aim of NOORUL ILM?</p>
+        <div class="course-card">
+            <img src="islam.png" alt="Islamic Studies">
+            <h2>Islamic Studies</h2>
+            <p>Learn Islamic values, manners, discipline and good character.</p>
+        </div>
 
-<p>Ans. Our aim is to spread Islamic knowledge and develop good character.</p>
+    </div>
 
-<p>Q8. How can I contact you?</p>
+    <a href="courses.html" class="button">Explore All Courses</a>
 
-<p>Ans. You can visit our Contact Us page for contact information.</p>
-<img src="3.png">
+</section>
+
+<!-- SERVICES -->
+
+<div class="services">
+
+    <h1>OUR SERVICES</h1>
+
+    <ul>
+        <li>Quran Education</li>
+        <li>Islamic Studies</li>
+        <li>Hadith Studies</li>
+        <li>Arabic Language</li>
+        <li>Islamic History</li>
+        <li>Online Islamic Learning</li>
+    </ul>
+
+</div>
+
+<!-- PROJECTS -->
+
+<div class="section">
+
+    <h1>OUR PROJECTS</h1>
+
+    <p>
+    At NOORUL ILM, we aim to promote Islamic knowledge,
+    education and positive values through meaningful
+    educational projects and community activities.
+    </p>
+
+    <h2>Our Future Goals</h2>
+
+    <p>• Digital Quran Education</p>
+    <p>• Online Arabic Classes</p>
+    <p>• Islamic E-Library</p>
+    <p>• Educational Resources for Students</p>
+
+</div>
+
+<!-- FAQ -->
+
+<div class="section faq">
+
+    <h1>FREQUENTLY ASKED QUESTIONS</h1>
+
+    <h3>Q1. What is NOORUL ILM?</h3>
+    <p>NOORUL ILM is an Islamic educational institute dedicated to spreading Islamic knowledge.</p>
+
+    <h3>Q2. What courses do you offer?</h3>
+    <p>We offer Quran, Tajweed, Hifz, Hadith, Tafseer, Arabic and Islamic Studies.</p>
+
+    <h3>Q3. Who can join the institute?</h3>
+    <p>Anyone interested in learning Islamic education can enquire about admission.</p>
+
+    <h3>Q4. Do you teach the Holy Quran?</h3>
+    <p>Yes, Quran reading and Tajweed are among our educational programs.</p>
+
+    <h3>Q5. Do you teach Arabic?</h3>
+    <p>Yes, we include Arabic language education.</p>
+
+    <h3>Q6. How can I get admission?</h3>
+    <p>You can contact our institute for admission information.</p>
+
+    <h3>Q7. What is the main aim of NOORUL ILM?</h3>
+    <p>Our aim is to spread Islamic knowledge and develop good character.</p>
+
+    <h3>Q8. How can I contact you?</h3>
+    <p>Visit our Contact Us page for contact information.</p>
+
+    <a href="contact.html" class="button">Contact Us</a>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>NOORUL ILM</h2>
+
+    <p>Knowledge is the Light of Life</p>
+
+    <p>© 2026 NOORUL ILM. All Rights Reserved.</p>
+
+</footer>
+
 </body>
 </html>

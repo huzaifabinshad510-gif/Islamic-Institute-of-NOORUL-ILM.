@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Courses - NOORUL ILM</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5ef;
+}
+
+nav {
+    background: #064E3B;
+    padding: 18px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #E9C875;
+}
+
+.header {
+    background: #064E3B;
+    color: white;
+    text-align: center;
+    padding: 50px 15px;
+    border-bottom: 5px solid #D6B45A;
+}
+
+.header h1 {
+    color: #E9C875;
+    font-size: 38px;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    line-height: 1.8;
+    color: #444;
+    font-size: 17px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.course-card {
+    background: white;
+    padding: 28px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border-top: 5px solid #D6B45A;
+    box-shadow: 0 4px 15px #ddd;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card h2 {
+    color: #064E3B;
+}
+
+.course-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.course-icon {
+    font-size: 38px;
+}
+
+.admission {
+    background: #064E3B;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+.admission h2 {
+    color: #E9C875;
+}
+
+.admission a {
+    display: inline-block;
+    background: #E9C875;
+    color: #064E3B;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    background: #064E3B;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+}
+
+@media(max-width:600px) {
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<div class="header">
+    <h1>OUR COURSES</h1>
+    <p>Learn Islam • Build Your Future</p>
+    <p>NOORUL ILM – Islamic Institute</p>
+</div>
+
+<div class="container">
+
+<p class="intro">
+Welcome to NOORUL ILM. We aim to provide Islamic
+education and help students understand the teachings
+of Islam through different educational courses.
+</p>
+
+<div class="course-grid">
+
+<div class="course-card">
+    <div class="course-icon">📖</div>
+    <h2>Quran Education</h2>
+    <p>Learn to read the Holy Quran with proper pronunciation and understanding.</p>
+</div>
+
+<div class="course-card">
+    <div class="course-icon">🌙</div>
+    <h2>Tajweed</h2>
+    <p>Learn the rules of Quranic recitation and correct pronunciation.</p>
+</div>
+
+<div class="course-card">
+    <div class="course-icon">📚</div>
+    <h2>Hifz-ul-Quran</h2>
+    <p>Learn and memorize the Holy Quran with regular revision.</p>
+</div>
+
+<div class="course-card">
+    <div class="course-icon">🕌</div>
+    <h2>Hadith Studies</h2>
+    <p>Study the teachings and traditions of Prophet Muhammad (PBUH).</p>
+</div>
+
+<div class="course-card">
+    <div class="course-icon">✍️</div>
+    <h2>Arabic Language</h2>
+    <p>Learn Arabic reading, writing and basic language skills.</p>
+</div>
+
+<div class="course-card">
+    <div class="course-icon">📜</div>
+    <h2>Islamic History</h2>
+    <p>Learn about Islamic history and important historical events.</p>
+</div>
+
+<div class="course-card">
+    <div class="course-icon">📘</div>
+    <h2>Tafseer</h2>
+    <p>Study the meanings and explanations of the Holy Quran.</p>
+</div>
+
+<div class="course-card">
+    <div class="course-icon">⭐</div>
+    <h2>Islamic Studies</h2>
+    <p>Learn Islamic values, manners, discipline and good character.</p>
+</div>
+
+</div>
+
+<div class="admission">
+    <h2>Interested in Our Courses?</h2>
+    <p>Contact NOORUL ILM for course and admission information.</p>
+
+    <a href="contact.html">Contact Us</a>
+</div>
+
+</div>
+
+<footer>
+    <h3 style="color:#E9C875;">NOORUL ILM</h3>
+    <p style="color:white;">Knowledge is the Light of Life</p>
+    <p style="color:white;">© 2026 NOORUL ILM. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
